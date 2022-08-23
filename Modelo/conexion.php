@@ -15,8 +15,10 @@ class conexion{
             $objConexion->setAttribute(PDO::ATTTR_ERRMODE, PDO:ERRMODE_EXCEPTION);
 
         }catch(\Throwlable $th){
-            
+            $objConexion = $th;
         }
+
+        return objConexino;
     }
 
 }

@@ -7,7 +7,7 @@ $(document).ready(function () {
         var direccion = $("#txtDireccion").val();
 
         var objData = new FormData();
-        objData.append("nombres", nombre, "apellidos", apellido, "direccion", direccion);
+        objData.append("nombres",nombre,"apellidos", apellido,"direccion", direccion);
 
         $.ajax({
             url: "Control/usuariosControl.php",
@@ -18,8 +18,8 @@ $(document).ready(function () {
             contentType: false,
             processData: false
         }).done(function (respuesta) {
-
-        })
+            
+        }) 
 
     })
 
