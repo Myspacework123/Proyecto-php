@@ -7,9 +7,12 @@ $(document).ready(function () {
         var direccion = $("#txtDireccion").val();
 
         var objData = new FormData();
-        objData.append("nombres",nombre,"apellidos", apellido,"direccion", direccion);
-
+        objData.append("nombres",nombre);
+        objData.append("apellidos",apellido);
+        objData.append("direccion",direccion);
+        
         $.ajax({
+            
             url: "Control/usuariosControl.php",
             type: "post",
             dataType: "json",
@@ -17,8 +20,9 @@ $(document).ready(function () {
             cache: false,
             contentType: false,
             processData: false
-        }).done(function (respuesta) {
-            
+        }).done(function(respuesta) {
+            debugger;
+            alert(respuesta);
         }) 
 
     })

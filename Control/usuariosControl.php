@@ -11,12 +11,11 @@ class CtrUsuarios{
     public function registrarUsuarios(){
         $objRespuesta = MdlUsuarios::mdlRegistrarUsuarios($this->nombre,$this->apellido,$this->direccion);
         echo json_encode($objRespuesta);
-
     }
 
 }
 
-if  (isset($_POST["nombres"],$_POST["apellidos"],$_POST["direccion"])){
+    if  (isset($_POST["nombres"],$_POST["apellidos"],$_POST["direccion"])){
 
     $objUsuarios = new CtrUsuarios();
     $objUsuarios->nombre = $_POST["nombres"];

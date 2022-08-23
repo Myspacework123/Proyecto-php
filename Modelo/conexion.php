@@ -6,19 +6,18 @@ class conexion{
         $server = "localhost";
         $usuario = "root";
         $password = "";
-
         $db = "senasoft";
 
         try {
 
             $objConexion = new PDO('mysql:host='.$server.';dbname='.$db.';',$usuario,$password);
-            $objConexion->setAttribute(PDO::ATTTR_ERRMODE, PDO:ERRMODE_EXCEPTION);
+            $objConexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        }catch(\Throwlable $th){
+        }catch(Exception $th){
             $objConexion = $th;
         }
 
-        return objConexino;
+        return $objConexion;
     }
 
 }
