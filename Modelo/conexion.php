@@ -1,6 +1,6 @@
 <?php
 
-class conexion{
+class  conexion{
 
     public static function conectar(){
         $server = "localhost";
